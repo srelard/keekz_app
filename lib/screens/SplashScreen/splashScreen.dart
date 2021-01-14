@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 fontSize: 30),
             children: <TextSpan>[
               TextSpan(
-                  text: "Experience",
+                  text: "Experiences",
                   style: TextStyle(
                       fontFamily: "Poppins",
                       color: constantColors.blueColor,
