@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1046816353681",
+    "project_id": "keekz-app",
+    "storage_bucket": "keekz-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046816353681:android:78a1344a91563efbe0fe30",
+        "android_client_info": {
+          "package_name": "com.example.keekz_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046816353681-pbvi6e7uf15pdrjv8p8mbb0pcm7qbh7i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.keekz_app",
+            "certificate_hash": "45c8f5fe48d3927f7f4bc25b25f5c58b27738254"
+          }
+        },
+        {
+          "client_id": "1046816353681-uae9esrqvqre6fkrogmuc4t9bam19amo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArqz8p8kx1YEE7Y5czmHvcPukGEV4wwto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046816353681-uae9esrqvqre6fkrogmuc4t9bam19amo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
