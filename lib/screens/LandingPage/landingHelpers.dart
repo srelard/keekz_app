@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:keekz_app/constants/Constantcolors.dart';
 import 'package:keekz_app/screens/Homepage/homepage.dart';
+import 'package:keekz_app/screens/LandingPage/landingServices.dart';
 import 'package:keekz_app/services/authentication.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -82,6 +83,9 @@ class LandingHelpers with ChangeNotifier {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
+                onTap: () {
+                  emailAuthSheet(context);
+                },
                 child: Container(
                   child: Icon(
                     Icons.email_outlined,
@@ -141,5 +145,63 @@ class LandingHelpers with ChangeNotifier {
             style: TextStyle(color: Colors.grey.shade600, fontSize: 12))
       ])),
     );
+  }
+
+  emailAuthSheet(BuildContext context) {
+    return showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Container(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 150),
+                  child: Divider(
+                    thickness: 4,
+                    color: constantColors.whiteColor,
+                  ),
+                ),
+                Provider.of<LandingService>(context, listen: false)
+                    .passwordLessSignIn(context),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    MaterialButton(
+                      color: constantColors.stateBlue,
+                      child: Text("Log in",
+                          style: TextStyle(
+                              color: constantColors.whiteColor,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold)),
+                      onPressed: () {
+                        Provider.of<LandingService>(context, listen: false)
+                            .logInSheet(context);
+                      },
+                    ),
+                    MaterialButton(
+                      color: constantColors.stateBlue,
+                      child: Text("Sign in",
+                          style: TextStyle(
+                              color: constantColors.whiteColor,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold)),
+                      onPressed: () {
+                        Provider.of<LandingService>(context, listen: false)
+                            .logInSheet(context);
+                      },
+                    )
+                  ],
+                )
+              ],
+            ),
+            height: MediaQuery.of(context).size.height * 0.5,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                color: constantColors.blueGreyColor,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    topRight: Radius.circular(15))),
+          );
+        });
   }
 }
