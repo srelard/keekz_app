@@ -16,7 +16,11 @@ class LandingPage extends StatelessWidget {
           Provider.of<LandingHelpers>(context, listen: false)
               .bodyImage(context),
           Provider.of<LandingHelpers>(context, listen: false)
-              .taglineText(context)
+              .taglineText(context),
+          Provider.of<LandingHelpers>(context, listen: false)
+              .mainButton(context),
+          Provider.of<LandingHelpers>(context, listen: false)
+              .privacyText(context),
         ],
       ),
     );
@@ -28,8 +32,14 @@ class LandingPage extends StatelessWidget {
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              stops: [0.1, 0.4],
-              colors: [constantColors.yellowColor, constantColors.whiteColor])),
+              stops: [
+            0.1,
+            0.4
+          ],
+              colors: [
+            constantColors.keekzOrange,
+            constantColors.keekzOrange
+          ])),
     );
   }
 }
