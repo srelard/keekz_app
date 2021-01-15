@@ -1,4 +1,3 @@
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:keekz_app/constants/Constantcolors.dart';
 import 'package:keekz_app/screens/Homepage/homepage.dart';
@@ -99,6 +98,7 @@ class LandingHelpers with ChangeNotifier {
               ),
               GestureDetector(
                 onTap: () {
+                  print("SignIn with Google");
                   Provider.of<Authentication>(context, listen: false)
                       .signInWithGoogle()
                       .whenComplete(() {

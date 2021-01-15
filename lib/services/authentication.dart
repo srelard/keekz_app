@@ -45,7 +45,6 @@ class Authentication with ChangeNotifier {
         await firebaseAuth.signInWithCredential(authCredential);
     final User user = userCredential.user;
     assert(user.uid != null);
-
     userUid = user.uid;
     print("Google User Uid => $userUid");
     notifyListeners();
